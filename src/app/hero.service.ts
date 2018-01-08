@@ -12,7 +12,7 @@ export class HeroService {
 
   getHeroes(): Observable<Hero[]> {
     // Todo: bericht versturen _na_ het ophalen van de heroes
-    this.messageService.add('HeroService: heroes opgehaald');
+    this.messageService.add('HeroService: Alle heroes opgehaald');
     return of(HEROES);
 }
 
