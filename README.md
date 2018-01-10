@@ -1,6 +1,8 @@
-# PtmApp
+# Place the Moment - Editor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
+This project is build for creating the visual Editor for Place the Moment.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2. and supports Flex-layout and [Material Design](https://material.io/) principles.
 
 ## Development server
 
