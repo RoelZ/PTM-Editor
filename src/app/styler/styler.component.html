@@ -1,0 +1,67 @@
+<mat-tab-group class="demo-tab-group">
+    <mat-tab label="Place">
+        <ng-template mat-tab-label>
+            <mat-icon aria-label="Place">location_on</mat-icon>
+            <span>Place</span>
+        </ng-template>
+        <div class="demo-tab-content">
+          <div fxLayoutAlign="space-around">
+            <h3>1. Choose your place</h3>
+          </div> 
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Find a location anywhere in the world" value="">
+                </mat-form-field>
+            </form>
+              
+        </div>
+    </mat-tab>
+    <mat-tab label="Moment">
+        <ng-template mat-tab-label>
+            <mat-icon aria-label="Moment">text_format</mat-icon>
+            <span>Moment</span>
+        </ng-template>
+        <div class="demo-tab-content">
+            <div fxLayoutAlign="space-around">  
+              <h3>2. Name your moment</h3>
+            </div>
+
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <input [(ngModel)]="poster.moment" name="moment" matInput placeholder="Give your most memorable moment a name" value="">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Location: City - Country" value="Eindhoven - The Netherlands">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Location: Address" value="De Jonghlaan 5">
+                </mat-form-field>
+            </form>
+        </div>
+    </mat-tab>
+    <mat-tab label="Design">
+        <ng-template mat-tab-label>
+            <mat-icon aria-label="Design">brush</mat-icon>
+            <span>Design</span>
+        </ng-template>
+        <div class="demo-tab-content">
+            <h3 fxLayoutAlign="center">3. Select your design</h3>
+            
+            <div style="margin:20px 0" fxLayoutAlign="space-around">
+            <button mat-fab class="snow">
+                <mat-icon aria-label="Snow style">location_on</mat-icon>
+            </button>
+            <button mat-fab class="moon">
+                <mat-icon aria-label="Moon style">location_on</mat-icon>
+            </button>
+            <button mat-fab class="granite">
+                <mat-icon aria-label="Granite style">location_on</mat-icon>
+            </button>
+            <button mat-fab class="mint">
+                <mat-icon aria-label="Mint style">location_on</mat-icon>
+            </button>
+            </div>
+
+        </div>
+    </mat-tab>
+</mat-tab-group>

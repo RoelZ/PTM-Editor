@@ -1,17 +1,45 @@
-.bounds {
-    height: 800px;
-}
-.sec1 {
-    color: white;
-    background: deepskyblue;
-}
-.sec2 {
-    background: deeppink;
-}
-.sec3 {
-    background: darkgoldenrod;
+/*
+@import '~@angular/material/theming';
+
+// Define the theme.
+$ptm-app-primary: mat-palette($mat-indigo);
+$ptm-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$ptm-app-theme:   mat-light-theme($ptm-app-primary, $ptm-app-accent);
+
+$ptm-app-snow:    mat-palette($mat-grey, A200, A100, A400);
+$ptm-app-granite: mat-palette($mat-grey);  //#54575c
+$ptm-app-mint:    mat-palette($mat-teal);  //#6fa189
+$ptm-app-yellow:  mat-palette($mat-amber); //#d8ae46
+
+/*
+$ptm-app-snow-theme:      mat-light-theme($ptm-app-snow, $ptm-app-granite);
+$ptm-app-moon-theme:      mat-light-theme($ptm-app-granite, $ptm-app-snow);
+$ptm-app-granite-theme:   mat-light-theme($ptm-app-granite, $ptm-app-yellow);
+$ptm-app-mint-theme:      mat-light-theme($ptm-app-mint, $ptm-app-snow);
+*/
+// Include the theme styles for only specified components.
+//@include mat-core-theme($ptm-app-theme);
+//@include mat-button-theme($ptm-app-granite-theme);
+//@include mat-checkbox-theme($ptm-app-theme);
+
+
+
+.example-selected-value {
+  margin: 15px 0;
 }
 
-.content {
-    min-width: 300px;
+.mat-card-content {
+  padding:16px 24px;
 }
+.styles-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+agm-map {   
+  height:300px;  
+} 
+  

@@ -1,18 +1,22 @@
-<div class="bounds">
-    <div class="content"
-        fxLayout="row"
-        fxLayout.xs="column"
-        fxFlexFill>
+<mat-card class="example-card">
+    <mat-card-content>
+        <div class="poster-image">
+            <agm-map 
+                [latitude]="lat" 
+                [longitude]="lng"
+                [zoom]="zoom"
+                [disableDefaultUI]="false"
+                [streetViewControl]="false"
+                [styles]="style">
+            </agm-map>
+        </div>        
+    </mat-card-content>
+    <mat-card-actions>
 
-        <div fxFlex="15" class="sec1" fxFlex.xs="55">
-            first section
+        <div fxLayoutAlign="space-around">            
+            <h3>{{poster.moment | uppercase }}</h3>
         </div>
-        <div fxFlex="30" class="sec2">
-            second section
-        </div>
-        <div fxFlex="55" class="sec3" fxFlex.xs="15">
-            third section
-        </div>
-
-    </div>
-</div>
+        
+        
+    </mat-card-actions>
+</mat-card>
