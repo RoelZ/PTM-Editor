@@ -52,7 +52,7 @@
             <div style="margin:20px 0" fxLayoutAlign="space-around">
                 
                     <button *ngFor="let style of styles" 
-                            [class.selected]="style == selectedStyle" 
+                            [class.selected]="style === selectedStyle" 
                             (click)="onSelect(style)"
                             [class.snow]="style.name == 'snow'"
                             [class.moon]="style.name == 'moon'"

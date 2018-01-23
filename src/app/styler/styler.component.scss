@@ -5,10 +5,10 @@ $ptm-app-granite: #54575c;
 $ptm-app-mint:    #6fa189;
 $ptm-app-yellow:  #d8ae46;
 
-.snow.mat-fab.mat-accent { color:$ptm-app-mint; background-color: $ptm-app-snow; } 
-.moon.mat-fab.mat-accent { color:$ptm-app-snow; background-color: $ptm-app-granite; } 
-.granite.mat-fab.mat-accent { color:$ptm-app-yellow; background-color: $ptm-app-granite; } 
-.mint.mat-fab.mat-accent { color:$ptm-app-granite; background-color: $ptm-app-mint; } 
+.snow { color:$ptm-app-mint; background-color: $ptm-app-snow; } 
+.moon { color:$ptm-app-snow; background-color: $ptm-app-granite; } 
+.granite { color:$ptm-app-yellow; background-color: $ptm-app-granite; } 
+.mint { color:$ptm-app-granite; background-color: $ptm-app-mint; } 
 
 .styles-row {
     display: flex;

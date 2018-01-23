@@ -10,6 +10,8 @@ import { PosterService } from '../poster.service';
 })
 export class StylerComponent implements OnInit {
 
+  selectedStyle: Style;
+  
   styles : Style[];
 
   @Input() poster: Poster = {
@@ -24,7 +26,6 @@ export class StylerComponent implements OnInit {
 
   constructor(private posterService: PosterService) { }
 
-  selectedStyle: Style;
 /*
   currentStyles: {};
   setCurrentStyles(){
@@ -36,12 +37,11 @@ export class StylerComponent implements OnInit {
     };
   };
 */
-  onSelect(style: Style): void {
-    this.selectedStyle = style;
-  }
 
   getStyles(): void {
-    this.styles = this.posterService.getStyles();
+    //this.styles = this.posterService.getStyles();
+    this.posterService.getStyles()
+    .subscribe(styles => this.styles = styles);
   }
 
   ngOnInit() {
@@ -49,4 +49,7 @@ export class StylerComponent implements OnInit {
   //  this.setCurrentStyles();
   }
 
+  onSelect(style: Style): void {
+    this.selectedStyle = style;
+  }
 }

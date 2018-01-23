@@ -22,6 +22,15 @@ $ptm-app-mint-theme:      mat-light-theme($ptm-app-mint, $ptm-app-snow);
 //@include mat-button-theme($ptm-app-granite-theme);
 //@include mat-checkbox-theme($ptm-app-theme);
 
+$ptm-app-snow:    white;
+$ptm-app-granite: #54575c;
+$ptm-app-mint:    #6fa189;
+$ptm-app-yellow:  #d8ae46;
+
+.snow { color:$ptm-app-mint; background-color: $ptm-app-snow; } 
+.moon { color:$ptm-app-snow; background-color: $ptm-app-granite; } 
+.granite { color:$ptm-app-yellow; background-color: $ptm-app-granite; } 
+.mint { color:$ptm-app-granite; background-color: $ptm-app-mint; } 
 
 
 .example-selected-value {
@@ -30,6 +39,7 @@ $ptm-app-mint-theme:      mat-light-theme($ptm-app-mint, $ptm-app-snow);
 
 .mat-card-content {
   padding:16px 24px;
+ 
 }
 .styles-row {
   display: flex;
@@ -37,9 +47,16 @@ $ptm-app-mint-theme:      mat-light-theme($ptm-app-mint, $ptm-app-snow);
   justify-content: space-around;
 }
 
-
+//https://stackoverflow.com/questions/36265026/angular-2-innerhtml-styling
+:host ::ng-deep .agm-map-container-inner {
+  border-radius: 50%;
+}
 
 agm-map {   
   height:300px;  
+
+  .moon {
+    background-color: $ptm-app-granite;
+  }
 } 
   

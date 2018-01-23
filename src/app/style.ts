@@ -4,5 +4,6 @@ export class Style {
     id: number;
     name: string;
     icon: string;
-    style: MapTypeStyle[];
+    bgcolor: string;
+    stylers: MapTypeStyle[];
 }

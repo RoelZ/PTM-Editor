@@ -1,21 +1,29 @@
 <mat-toolbar color="accent" fxLayout="row">
     <button mat-button>&euro;49</button><button mat-button fxFlex>Add to cart</button>
 </mat-toolbar>
-<mat-card class="example-card">
+<mat-card class="example-card" *ngIf="style" 
+[class.snow]="style.name == 'snow'"
+[class.granite]="style.name == 'granite'"
+[class.mint]="style.name == 'mint'">
     <mat-card-content>
-        <div class="poster-image" *ngIf="selectedStyle">
+        <div class="poster-image">            
             <agm-map 
-                [(ngModel)]="selectedStyle.name"
                 [latitude]="lat" 
                 [longitude]="lng"
                 [zoom]="zoom"
                 [disableDefaultUI]="false"
                 [streetViewControl]="false"
-                [styles]="selectedStyle.style"
-                ngDefaultControl>
+                [styles]="style.stylers"
+                [backgroundColor]="style.name == 'moon' ? '#54575c' : 'hsla(0, 0%, 0%, 0)'"
+                [class.snow]="style.name == 'snow'"
+                [class.moon]="style.name == 'moon'"
+                [class.granite]="style.name == 'granite'"
+                [class.mint]="style.name == 'mint'">
             </agm-map>
+        
         </div>        
     </mat-card-content>
+
     <mat-card-actions>
 
         <div fxLayoutAlign="space-around">            
