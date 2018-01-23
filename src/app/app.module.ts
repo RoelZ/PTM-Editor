@@ -21,6 +21,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { StylerComponent } from './styler/styler.component';
+import { PosterService } from './poster.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { StylerComponent } from './styler/styler.component';
       apiKey: 'AIzaSyCE1svBjPmf71zWMhdr5r0Xu9EDN2sxwHk'
     })
   ],
-  providers: [HeroService, MessageService],
+  providers: [PosterService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

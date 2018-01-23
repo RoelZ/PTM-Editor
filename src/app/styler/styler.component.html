@@ -1,3 +1,4 @@
+<app-editor [style]="selectedStyle"></app-editor>
 <mat-tab-group class="demo-tab-group">
     <mat-tab label="Place">
         <ng-template mat-tab-label>
@@ -47,10 +48,23 @@
         <div class="demo-tab-content">
             <h3 fxLayoutAlign="center">3. Select your design</h3>
             
+
             <div style="margin:20px 0" fxLayoutAlign="space-around">
-            <button mat-fab class="snow">
-                <mat-icon aria-label="Snow style">location_on</mat-icon>
-            </button>
+                
+                    <button *ngFor="let style of styles" 
+                            [class.selected]="style == selectedStyle" 
+                            (click)="onSelect(style)"
+                            [class.snow]="style.name == 'snow'"
+                            [class.moon]="style.name == 'moon'"
+                            [class.granite]="style.name == 'granite'"
+                            [class.mint]="style.name == 'mint'"
+                            mat-fab>
+                        <mat-icon aria-label="style">location_on</mat-icon>
+                    </button>
+                
+                </div>
+
+            <!--
             <button mat-fab class="moon">
                 <mat-icon aria-label="Moon style">location_on</mat-icon>
             </button>
@@ -60,7 +74,8 @@
             <button mat-fab class="mint">
                 <mat-icon aria-label="Mint style">location_on</mat-icon>
             </button>
-            </div>
+            -->
+
 
         </div>
     </mat-tab>
