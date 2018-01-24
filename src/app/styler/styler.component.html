@@ -1,4 +1,5 @@
-<app-editor [style]="selectedStyle"></app-editor>
+<app-editor [style]="selectedStyle" [poster]="poster"></app-editor>
+
 <mat-tab-group class="demo-tab-group">
     <mat-tab label="Place">
         <ng-template mat-tab-label>
@@ -32,10 +33,10 @@
                   <input [(ngModel)]="poster.moment" name="moment" matInput placeholder="Give your most memorable moment a name" value="">
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Location: City - Country" value="Eindhoven - The Netherlands">
+                  <input [(ngModel)]="poster.location" name="location" matInput placeholder="Location: City - Country" value="">
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Location: Address" value="De Jonghlaan 5">
+                  <input [(ngModel)]="poster.address" name="address" matInput placeholder="Location: Address" value="">
                 </mat-form-field>
             </form>
         </div>

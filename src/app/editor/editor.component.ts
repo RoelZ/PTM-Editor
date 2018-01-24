@@ -14,6 +14,9 @@ import { AgmMap } from '@agm/core/directives/map';
 export class EditorComponent implements OnInit {
   
   @Input() style: Style;
+  //@Input() posters: Poster;
+  @Input() poster: Poster;
+
   //AgmMap: Style;
 
   //styles: Style[];
@@ -21,14 +24,14 @@ export class EditorComponent implements OnInit {
   //style: Style;
   //selectedStyle: Style;
 
+  //selectedPoster: Poster;
 
 /*
   onSelect(style: Style): void {
     this.selectedStyle = style;
   }
-*/
 
-  poster: Poster = {
+poster: Poster = {
     id: 1,
     moment: 'Your text here',
     placeid: '',
@@ -37,7 +40,7 @@ export class EditorComponent implements OnInit {
     lat: 0,
     lng: 0
   }
-
+*/
   zoom: number = 5;
 
   lat: number = 51.4431041;

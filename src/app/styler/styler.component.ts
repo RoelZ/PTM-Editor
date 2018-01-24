@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Poster } from '../poster';
 import { Style } from '../style';
 import { PosterService } from '../poster.service';
+import { EditorComponent } from '../editor/editor.component';
 
 @Component({
   selector: 'app-styler',
@@ -11,18 +12,20 @@ import { PosterService } from '../poster.service';
 export class StylerComponent implements OnInit {
 
   selectedStyle: Style;
+  //selectedPoster: Poster;
+  childMoment:string = "Your text here";
   
   styles : Style[];
 
-  @Input() poster: Poster = {
+  poster: Poster = {
     id: 1,
     moment: 'Your text here',
     placeid: '',
-    location: '',
-    address: '',
+    location: 'Eindhoven - The Netherlands',
+    address: 'De Jonghlaan 5',
     lat: 0,
     lng: 0
-  }
+  } 
 
   constructor(private posterService: PosterService) { }
 

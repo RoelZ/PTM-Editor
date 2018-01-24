@@ -24,10 +24,16 @@
 
     <mat-card-actions>
 
-        <div fxLayoutAlign="space-around">            
-            <h3>{{poster.moment | uppercase }}</h3>
+        <div fxLayout="column" fxLayoutAlign="space-around center" >
+
+            
+                <h3>{{poster.moment | uppercase }}</h3>
+            
+                <h5>{{poster.location}}</h5>
+            
+                <h6>{{poster.address}}</h6>
+            
         </div>
-        
         
     </mat-card-actions>
 </mat-card>
