@@ -27,10 +27,10 @@ $ptm-app-granite: #54575c;
 $ptm-app-mint:    #6fa189;
 $ptm-app-yellow:  #d8ae46;
 
-.snow { color:$ptm-app-mint; background-color: $ptm-app-snow; } 
-.moon { color:$ptm-app-snow; background-color: $ptm-app-granite; } 
-.granite { color:$ptm-app-yellow; background-color: $ptm-app-granite; } 
-.mint { color:$ptm-app-granite; background-color: $ptm-app-mint; } 
+.snow { color:black; background-color: $ptm-app-snow; } 
+.moon { color:$ptm-app-granite; background-color: $ptm-app-snow; } 
+.granite { color:$ptm-app-snow; background-color: $ptm-app-granite; } 
+.mint { color:$ptm-app-snow; background-color: $ptm-app-mint; } 
 
 
 .example-selected-value {
@@ -52,11 +52,15 @@ $ptm-app-yellow:  #d8ae46;
   border-radius: 50%;
 }
 
+:host ::ng-deep .henk {
+  .agm-map-container-inner {
+    background-color:$ptm-app-granite;
+  }
+  
+}
+
 agm-map {   
   height:300px;  
 
-  .moon {
-    background-color: $ptm-app-granite;
-  }
 } 
   
